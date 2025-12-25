@@ -88,6 +88,18 @@ class $AssetsImagesGen {
   AssetGenImage get headerLogoImg =>
       const AssetGenImage('assets/images/header_logo_img.png');
 
+  /// File path: assets/images/img_bottom_decoration.png
+  AssetGenImage get imgBottomDecoration =>
+      const AssetGenImage('assets/images/img_bottom_decoration.png');
+
+  /// File path: assets/images/img_left_corner.png
+  AssetGenImage get imgLeftCorner =>
+      const AssetGenImage('assets/images/img_left_corner.png');
+
+  /// File path: assets/images/img_right_corner.png
+  AssetGenImage get imgRightCorner =>
+      const AssetGenImage('assets/images/img_right_corner.png');
+
   /// File path: assets/images/most_recent_img.png
   AssetGenImage get mostRecentImg =>
       const AssetGenImage('assets/images/most_recent_img.png');
@@ -120,6 +132,9 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [
     hadithBackgroundImg,
     headerLogoImg,
+    imgBottomDecoration,
+    imgLeftCorner,
+    imgRightCorner,
     mostRecentImg,
     quranBackgroundImg,
     radioBackgroundImg,

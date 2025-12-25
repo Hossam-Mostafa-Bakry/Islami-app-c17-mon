@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app_c17_mon/core/gen/assets.gen.dart';
 import 'package:islami_app_c17_mon/core/theme/color_pallete.dart';
 import 'package:islami_app_c17_mon/models/sura_data.dart';
+import 'package:islami_app_c17_mon/quran/quran_details_view.dart';
 import 'package:islami_app_c17_mon/quran/widgets/most_recently_card_widget.dart';
 import 'package:islami_app_c17_mon/quran/widgets/sura_card_widget.dart';
 
@@ -13,7 +14,6 @@ class QuranView extends StatefulWidget {
 }
 
 class _QuranViewState extends State<QuranView> {
-
   List<String> arabicQuranSuras = [
     "الفاتحه",
     "البقرة",
@@ -363,7 +363,6 @@ class _QuranViewState extends State<QuranView> {
     '6',
   ];
 
-
   List<SuraData> suraList = [
     SuraData(
       suraNameEN: "Al-Fatiha",
@@ -468,7 +467,16 @@ class _QuranViewState extends State<QuranView> {
               physics: const NeverScrollableScrollPhysics(),
               padding: EdgeInsets.zero,
               itemBuilder:
-                  (context, index) => SuraCardWidget(suraData: suraList[index]),
+                  (context, index) => InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        QuranDetailsView.routeName,
+                        arguments: suraList[index],
+                      );
+                    },
+                    child: SuraCardWidget(suraData: suraList[index]),
+                  ),
               separatorBuilder:
                   (context, index) => Divider(indent: 40, endIndent: 40),
               itemCount: suraList.length,

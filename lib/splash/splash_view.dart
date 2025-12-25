@@ -8,6 +8,8 @@ import 'package:islami_app_c17_mon/layout/layout_view.dart';
 ///
 /// Navigation
 class SplashView extends StatefulWidget {
+  static const String routeName = "/splash";
+
   const SplashView({super.key});
 
   @override
@@ -19,13 +21,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) {
-            return const LayoutView();
-          },
-        ),
-      );
+      Navigator.pushReplacementNamed(context, LayoutView.routeName);
     });
   }
 

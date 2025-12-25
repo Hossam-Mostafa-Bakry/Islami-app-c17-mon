@@ -5,6 +5,18 @@ import 'color_pallete.dart';
 abstract class ThemeManager {
   static ThemeData themeData = ThemeData(
     primaryColor: ColorPallete.primaryColor,
+    scaffoldBackgroundColor: ColorPallete.scaffoldBackgroundColor,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontFamily: "Janna",
+        fontSize: 20,
+        fontWeight: FontWeight.w700,
+        color: ColorPallete.primaryColor,
+      ),
+      iconTheme: IconThemeData(color: ColorPallete.primaryColor),
+    ),
     textTheme: TextTheme(
       headlineSmall: TextStyle(
         fontFamily: "Janna",

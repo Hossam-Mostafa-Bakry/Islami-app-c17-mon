@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app_c17_mon/core/theme/theme_manager.dart';
+import 'package:islami_app_c17_mon/quran/quran_details_view.dart';
 import 'package:islami_app_c17_mon/splash/splash_view.dart';
+
+import 'layout/layout_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +18,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeManager.themeData,
-      home: SplashView(),
+      initialRoute: SplashView.routeName,
+      routes: {
+        SplashView.routeName: (context) => const SplashView(),
+        LayoutView.routeName: (context) => const LayoutView(),
+        QuranDetailsView.routeName: (context) => QuranDetailsView(),
+      },
     );
   }
 }
