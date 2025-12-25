@@ -40,15 +40,6 @@ class _LayoutViewState extends State<LayoutView> {
           selectedIndex = index;
           setState(() {});
         },
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFFE2BE7F),
-        showUnselectedLabels: false,
-        selectedItemColor: Colors.white,
-        selectedLabelStyle: TextStyle(
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        ),
         items: [
           BottomNavigationBarItem(
             icon: Assets.icons.quranInActiveIcn.svg(),
