@@ -92,7 +92,7 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
 
   Future<void> loadDataFromAssets(String suraNumber) async {
     String quranText = await rootBundle.loadString(
-      "assets/files/$suraNumber.txt",
+      "assets/files/quran/$suraNumber.txt",
     );
 
     setState(() {
