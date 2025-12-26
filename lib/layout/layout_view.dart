@@ -7,6 +7,8 @@ import 'package:islami_app_c17_mon/sebha/sebha_view.dart';
 import 'package:islami_app_c17_mon/time/time_view.dart';
 
 class LayoutView extends StatefulWidget {
+  static const String routeName = "/layout";
+
   const LayoutView({super.key});
 
   @override
@@ -40,15 +42,6 @@ class _LayoutViewState extends State<LayoutView> {
           selectedIndex = index;
           setState(() {});
         },
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFFE2BE7F),
-        showUnselectedLabels: false,
-        selectedItemColor: Colors.white,
-        selectedLabelStyle: TextStyle(
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        ),
         items: [
           BottomNavigationBarItem(
             icon: Assets.icons.quranInActiveIcn.svg(),
